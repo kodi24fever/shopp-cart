@@ -3,7 +3,14 @@
 This project was made with [Create React App](https://github.com/facebook/create-react-app).
 
 # Download Project from Repository
-[Download Repository](https://github.com/facebook/create-react-app)
+[Download Repository](https://github.com/kodi24fever/shopp-cart.git)
+
+or
+
+Install the modules.
+```sh
+git clone https://github.com/kodi24fever/shopp-cart.git
+```
 
 ## Installation
 
