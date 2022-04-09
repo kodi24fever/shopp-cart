@@ -36,7 +36,7 @@ export default class Navbar extends React.Component{
                     <div className="flex flex-row justify-between">
                         <div className="basis-1/4 pt-5"><img src={Logo}/></div>
                         <div className="basis-1/2 pt-5 hide-el">
-                            <div className="flex justify-center gap-10 flex-nowrap">
+                            <div className="flex justify-center gap-10 flex-nowrap letter-nav">
                                 {
                                     this.state.links.map((link, index) => <div key={index} className="text-white">{link.toUpperCase()}</div>)
                                 }

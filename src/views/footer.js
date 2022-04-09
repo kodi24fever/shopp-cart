@@ -12,7 +12,7 @@ import Video from './../assets/Footer-Video.png';
 export default class Footer extends React.Component {
     render() {
         return(
-            <div className="move-top flex flex-col ">
+            <div className="letter-cards move-top flex flex-col ">
                 <div className="mb-auto h-96 bg-[#022B5B] pt-8 md:pt-20 lg:pt-20 footer-wrap">
                     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-1 sm:p-1 md:grid-cols-5 lg:grid-cols-5 md:gap-5 xl:grid-cols-5 xl:gap-10">
                         <div className="flex flex-col">

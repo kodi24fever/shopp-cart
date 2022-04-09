@@ -14,20 +14,20 @@ export default class Cards extends React.Component {
                             {
                                 state.products.map((product) => {
                                     return (
-                                        <div className="cards rounded-lg overflow-hidden shadow-lg bg-white" key={product.id}>
+                                        <div className="letter-cards cards rounded-lg overflow-hidden shadow-lg bg-white" key={product.id}>
                                             <div className="container bg-slate-400 h-40 flex items-center justify-center">
                                                 <img className="relative h-48 pt-6" src={product.path}/>
                                             </div>
                                             <div className="px-6 py-4">
-                                                <div className="font-bold text-xl">{product.name}</div>
+                                                <div className="font-black text-2xl text-[#081F32]">{product.name}</div>
                                                 <div>
-                                                    <span className="inline-block py-1 text-sm font-bold text-gray-700 mr-2 mb-2">{product.type}</span>
+                                                    <span className="inline-block py-1 text-sm font-bold text-gray-700 mr-2 mb-2 text-[#000A26]">{product.type}</span>
                                                 </div>
                                                 <div>
                                                     <span className="inline-block py-1 text-sm font-semibold text-sky-700 mr-2 mb-2">{product.needle} NEEDLE</span>
                                                     <span className="inline-block py-1 text-sm font-semibold text-sky-700 mr-2 mb-2">{product.head.toUpperCase()}</span>
                                                 </div>
-                                                <p className="text-gray-700 text-base">{product.description}</p>
+                                                <p className="text-[#6E798C] text-base">{product.description}</p>
                                             </div>
                                             <div class="px-6 pt-4 pb-2">
                                                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"></span>
@@ -35,9 +35,9 @@ export default class Cards extends React.Component {
                                                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"></span>
                                             </div>
                                             <div class="flex flex-row pl-6 mt-6 mb-6">
-                                                <span className="px-3 py-1 text-sm font-semibold text-gray-700">${product.deal}</span>
-                                                <span className="py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">${product.price}</span>
-                                                <button className="object-right bg-orange-500 px-3 py-1 text-sm font-semibold text-white ml-1000 mr-2 mb-2" onClick={() => actions.addCart(product.id)}>ORDER</button>
+                                                <div><span className="px-3 py-1 text-xl font-semibold text-gray-700 text-[#081F32]">${product.deal}</span></div>
+                                                <div><span className="py-1 text-xl font-semibold text-gray-700 mr-2 mb-2 text-[#F17D21] lined">${product.price}</span></div>
+                                                <div className=""><button className="bg-[#F17D21] px-3 py-1 text-base font-medium tracking-widest text-white mr-2 mb-2 rounded-lg" onClick={() => actions.addCart(product.id)}>ORDER</button></div>
                                             </div>
                                         </div>
                                     )

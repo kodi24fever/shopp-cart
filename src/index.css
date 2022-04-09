@@ -20,7 +20,22 @@ code {
 
 html {
   height: -webkit-fill-available;
+  
 }
+
+.lined {
+  text-decoration: line-through;
+}
+
+.letter-cards {
+  font-family: 'Open Sans';
+}
+.letter-nav {
+  font-family: 'Montserrat';
+}
+
+
+
 
 /*NAVBAR ******************************************************/
 #nav {
