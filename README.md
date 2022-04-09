@@ -7,7 +7,7 @@ This project was made with [Create React App](https://github.com/facebook/create
 
 or
 
-Install the modules.
+Install the with git clone.
 ```sh
 git clone https://github.com/kodi24fever/shopp-cart.git
 ```

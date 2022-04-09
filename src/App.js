@@ -71,7 +71,7 @@ export default class App extends React.Component{
       };
 
 
-    // Actions can be passed to child components also we can fetch apis form here ;)
+    // Actions can be passed to child components also we can fetch endpoints here ;)
 
 
     this.actions = {
