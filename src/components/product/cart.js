@@ -56,7 +56,7 @@ export default class Cart extends React.Component {
     
                                                                 <div className="flex justify-left">
                                                                     <button className="w-6 h-6 rounded-full bg-gray-200" onClick={() => actions.handleDecrement(index)}>
-                                                                        <svg className="fill-current text-gray-600 w-3 mx-auto" viewBox="0 0 448 512">
+                                                                        <svg className="fill-current text-[#6E70FF] w-3 mx-auto" viewBox="0 0 448 512">
                                                                         <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                                                                     </svg>
                                                                     </button>
@@ -64,7 +64,7 @@ export default class Cart extends React.Component {
                                                                     <input className="border-none mx-2 border text-center w-8" type="text" value={product.startingCount}/>
     
                                                                     <button className="w-6 h-6 rounded-full bg-gray-200" onClick={() => actions.handleSum(index)}>
-                                                                        <svg className="fill-current text-gray-600 w-3 mx-auto" viewBox="0 0 448 512">
+                                                                        <svg className="fill-current text-[#6E70FF] w-3 mx-auto" viewBox="0 0 448 512">
                                                                         <path className="" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
                                                                     </svg></button>
                                                                 </div>

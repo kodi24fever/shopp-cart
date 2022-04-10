@@ -35,8 +35,6 @@ html {
 }
 
 
-
-
 /*NAVBAR ******************************************************/
 #nav {
   position: absolute;
@@ -58,6 +56,19 @@ html {
   right: 15%;
   z-index: 1000;
   border-top: 1px  grey;
+}
+.cart-notification {
+  position: relative;
+  right: -17px;
+  bottom: -13px;
+  border: 1px solid black;
+}
+.cart-notification-hidden {
+  visibility: hidden;
+}
+.car-button {
+  position: relative;
+  top: -5px;
 }
 
 /*CARDS AND BODY *********************************************/

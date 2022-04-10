@@ -136,6 +136,7 @@ export default class App extends React.Component{
                 this.setState({
                   cart: deleteCartProduct
                 });
+                //********************************************************************************* */
 
             }else if(count > 1){
                 newProducts[productIndex] = {...newProducts[productIndex], 

@@ -2,9 +2,9 @@ import React from 'react';
 import './../index.css';
 import Logo from './../assets/Ricoma-Logo.png';
 import CartLogo from './../assets/Cart.png';
-import Oval from './../assets/Oval.png';
 import Cart from './product/cart';
 import Vector from './../assets/Vector.png';
+import {Consumer} from './../store/appContext';
 
 export default class Navbar extends React.Component{
     constructor(){
@@ -26,9 +26,6 @@ export default class Navbar extends React.Component{
         });
     }
 
-    
-    
-
     render() {
         return (
             <div id="nav">
@@ -42,13 +39,25 @@ export default class Navbar extends React.Component{
                                 }
                             </div>
                         </div>
-                        <div className="basis-1/3 lg:basis-1/4 pt-5">
-                            <div className="grid justify-items-end">
-                                <button onClick={this.showHide}><img src={CartLogo}/>
+                        <div className="basis-1/3 lg:basis-1/4">
+                            <div className="grid justify-items-end text-white">
+                            <button onClick={this.showHide}>
+                                <Consumer>
+                                    {/*SHOWS HIDES CART NOTIFICATION WHEN USER ADDS NEW ITEMS*/}
+                                    {({state}) => {
+                                        if(state.cart.length >= 1){
+                                            return <div className="w-7 h-7 bg-[#0076FF] rounded-full cart-notification">{state.cart.length}</div>
+                                        }else return <div className="w-7 h-7 bg-[#0076FF] rounded-full cart-notification cart-notification-hidden"></div>
+                                    }}
+                                </Consumer>
+                                
+                                <img src={CartLogo}/>
                                 </button>
                             </div>
                         </div>
-                        <div className="basis-1/7 pt-5 hide-vi show-el"><button><img src={Vector}/></button></div>
+                        <div className="basis-1/7 pt-5 hide-vi show-el">
+                            <button><img src={Vector}/></button>
+                        </div>
                     </div>
                 </div>
                 {this.state.show ? <Cart /> : null}
