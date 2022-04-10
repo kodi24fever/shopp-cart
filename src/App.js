@@ -129,6 +129,14 @@ export default class App extends React.Component{
                     cart: newProducts,
                     total: newTotal - deal
                 });
+
+
+                //this functionality removes item from cart when startingCoutn variable goes 0
+                let deleteCartProduct = newProducts.filter((product) => product.startingCount !== 0);
+                this.setState({
+                  cart: deleteCartProduct
+                });
+
             }else if(count > 1){
                 newProducts[productIndex] = {...newProducts[productIndex], 
                     startingCount: count,
@@ -160,7 +168,7 @@ export default class App extends React.Component{
         const deal = this.state.products[productIndex].deal;
 
         let newTotal = this.state.total;
-        //this variable tells if item exists in cart to no add same product to cart twice
+        //this variable tells if item exists in cart not adding same product to cart twice
         let isItemInCart = false;
 
         this.state.cart.forEach((item) => {if(newProducts.id == item.id){ isItemInCart = true}});
