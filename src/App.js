@@ -80,6 +80,9 @@ export default class App extends React.Component{
             const productIndex = index;
             let newProducts = [...this.state.cart]
             let count = newProducts[productIndex].startingCount + 1;
+
+            //adding to total
+            let newTotal = this.state.total;
   
             const deal = newProducts[productIndex].deal;
             let newDeal = deal * count;
@@ -90,18 +93,22 @@ export default class App extends React.Component{
             }
   
             this.setState({
-                cart: newProducts,
+              cart: newProducts,
+              total: newTotal + deal
             });
   
-            this.actions.handleTotal(productIndex);
+            //this.actions.handleTotal(productIndex);
         },
         // Decreases price of products from cart
       "handleDecrement": (index) => {
             const productIndex = index
             let newProducts = [...this.state.cart]
             let count = newProducts[productIndex].startingCount - 1;
+
+
+            let newTotal = this.state.total;
             
-            let deal = newProducts[productIndex].deal;
+            const deal = newProducts[productIndex].deal;
             let newDeal = deal * count;
     
             if(count == 1){
@@ -111,6 +118,7 @@ export default class App extends React.Component{
                 }
                 this.setState({
                     cart: newProducts,
+                    total: newTotal - deal
                 });
             }else if(count == 0){
                 newProducts[productIndex] = {...newProducts[productIndex], 
@@ -119,6 +127,7 @@ export default class App extends React.Component{
                 }
                 this.setState({
                     cart: newProducts,
+                    total: newTotal - deal
                 });
             }else if(count > 1){
                 newProducts[productIndex] = {...newProducts[productIndex], 
@@ -127,11 +136,12 @@ export default class App extends React.Component{
                 }
                 this.setState({
                     cart: newProducts,
+                    total: newTotal - deal
                 });
             }
         },
         // handle the total for checkout
-        "handleTotal": () => {
+        /*"handleTotal": () => {
           let total = this.state.total;
           let newProducts = [...this.state.cart]
           let newTotalPrice = newProducts.map((product) => product.cartPrice)
@@ -142,11 +152,14 @@ export default class App extends React.Component{
           this.setState({
               total: total
           });
-      },
+      },*/
       // Add item to cat from products
       "addCart": (id) => {
         const productIndex = this.state.products.findIndex(product => product.id == id);
         let newProducts = this.state.products[productIndex];
+        const deal = this.state.products[productIndex].deal;
+
+        let newTotal = this.state.total;
         //this variable tells if item exists in cart to no add same product to cart twice
         let isItemInCart = false;
 
@@ -157,7 +170,8 @@ export default class App extends React.Component{
         if (!isItemInCart) {
           addCart.push(newProducts)
             this.setState({
-              cart: addCart
+              cart: addCart,
+              total: newTotal + deal
             });
         } else {
           const cartItemIndex = this.state.cart.findIndex(product => product.id == id);

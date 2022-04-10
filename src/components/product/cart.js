@@ -76,7 +76,7 @@ export default class Cart extends React.Component {
                                         }
                                         <div class="flex justify-between">
                                             <h1 className="font-semibold text-2xl">Order Total</h1>
-                                            <h2 className="font-semibold text-2xl">{state.total}</h2>
+                                            <h2 className="font-semibold text-2xl">${state.total}</h2>
                                         </div>
     
                                         <div className="flex justify-center">
