@@ -99,11 +99,10 @@ export default class App extends React.Component{
       "handleDecrement": (index) => {
             const productIndex = index
             let newProducts = [...this.state.cart]
-            let count = newProducts[productIndex].startingCount;
-            let newCount = count - 1 ;
+            let count = newProducts[productIndex].startingCount - 1;
             
             let deal = newProducts[productIndex].deal;
-            let newDeal = deal / count;
+            let newDeal = deal * count;
     
             if(count == 1){
                 newProducts[productIndex] = {...newProducts[productIndex], 
@@ -123,7 +122,7 @@ export default class App extends React.Component{
                 });
             }else if(count > 1){
                 newProducts[productIndex] = {...newProducts[productIndex], 
-                    startingCount: newCount,
+                    startingCount: count,
                     cartPrice: newDeal
                 }
                 this.setState({
@@ -148,11 +147,22 @@ export default class App extends React.Component{
       "addCart": (id) => {
         const productIndex = this.state.products.findIndex(product => product.id == id);
         let newProducts = this.state.products[productIndex];
+        //this variable tells if item exists in cart to no add same product to cart twice
+        let isItemInCart = false;
+
+        this.state.cart.forEach((item) => {if(newProducts.id == item.id){ isItemInCart = true}});
+
         let addCart = this.state.cart;
-        addCart.push(newProducts)
-        this.setState({
-          cart: addCart
-        });
+
+        if (!isItemInCart) {
+          addCart.push(newProducts)
+            this.setState({
+              cart: addCart
+            });
+        } else {
+          const cartItemIndex = this.state.cart.findIndex(product => product.id == id);
+          this.actions.handleSum(cartItemIndex)
+        }
       }
     };
   }
