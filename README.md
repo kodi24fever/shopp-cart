@@ -49,4 +49,6 @@ Shopp-cart uses a number of open source projects to work properly:
 - [Context API] - Built in React kinda state managment for small web-apps
 - [React-Routing] - To travel between paths (not implemented)
 
-Thanks for visiting my react-portfolio-website and for taking time to read this!
+## Conclusion
+
+Thanks for visiting this shopping-cart-app and for taking time to read this! Enjoy it!!
