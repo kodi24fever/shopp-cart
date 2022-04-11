@@ -35,13 +35,13 @@ export default class Navbar extends React.Component{
                         <div className="basis-1/2 pt-5 hide-el">
                             <div className="flex justify-center gap-10 flex-nowrap letter-nav">
                                 {
-                                    this.state.links.map((link, index) => <div key={index} className="text-white">{link.toUpperCase()}</div>)
+                                    this.state.links.map((link, index) => <div key={index} className="text-white hover:text-[#F17D21] hover:cursor-pointer">{link.toUpperCase()}</div>)
                                 }
                             </div>
                         </div>
                         <div className="basis-1/3 lg:basis-1/4">
                             <div className="grid justify-items-end text-white">
-                            <button onClick={this.showHide}>
+                            <button className="cart-button" onClick={this.showHide}>
                                 <Consumer>
                                     {/*SHOWS HIDES CART NOTIFICATION WHEN USER ADDS NEW ITEMS*/}
                                     {({state}) => {

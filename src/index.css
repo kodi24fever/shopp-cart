@@ -66,7 +66,7 @@ html {
 .cart-notification-hidden {
   visibility: hidden;
 }
-.car-button {
+.cart-button {
   position: relative;
   top: -5px;
 }
