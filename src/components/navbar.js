@@ -28,8 +28,8 @@ export default class Navbar extends React.Component{
 
     render() {
         return (
-            <div id="nav">
-                <div className="mobile-nav container mx-auto">
+            <div id="nav" className="fixed">
+                <div className="mobile-nav container mx-auto px-4 lg:px-0">
                     <div className="flex flex-row justify-between">
                         <div className="basis-1/4 pt-5"><img src={Logo}/></div>
                         <div className="basis-1/2 pt-5 hide-el">

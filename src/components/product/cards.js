@@ -10,7 +10,7 @@ export default class Cards extends React.Component {
                 {({state, actions}) => {
                     return(
                         <React.Fragment>
-                        <div className="cards-lg mobile-cards pr-10 lg:pt-10 grid grid-cols-1 sm:grid-cols-1 sm:p-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 xl:grid-cols-4 xl:gap-10">
+                        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 xl:grid-cols-4 xl:gap-10 pt-10 lg:pr-0 ">
                             {
                                 state.products.map((product) => {
                                     return (
