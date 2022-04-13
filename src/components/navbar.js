@@ -45,8 +45,8 @@ export default class Navbar extends React.Component{
                                 <Consumer>
                                     {/*SHOWS HIDES CART NOTIFICATION WHEN USER ADDS NEW ITEMS*/}
                                     {({state}) => {
-                                        if(state.cart.length >= 1){
-                                            return <div className="w-7 h-7 bg-[#0076FF] rounded-full cart-notification">{state.cart.length}</div>
+                                        if(state.totalInCart >= 1){
+                                            return <div className="w-7 h-7 bg-[#0076FF] rounded-full cart-notification">{state.totalInCart}</div>
                                         }else return <div className="w-7 h-7 bg-[#0076FF] rounded-full cart-notification cart-notification-hidden"></div>
                                     }}
                                 </Consumer>
