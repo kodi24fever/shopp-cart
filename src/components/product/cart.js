@@ -28,8 +28,8 @@ export default class Cart extends React.Component {
                 <Consumer>
                     {({state, actions}) => {
                         return(
-                            <div className="container lg:ml-[58%] xl:ml-[63%] lg:w-96 max-h-[500px] overflow-x-hidden">
-                                <div className="md:ml-auto lg:ml-auto mt-2 md:mt-9 lg:mt-5 lg:w-96 md:w-96 max-h-screen md:max-h-screen lg:max-h-[550px] overflow-y-scroll ">
+                            <div className="container lg:ml-[58%] xl:ml-[63%] lg:w-96 max-h-[500px]">
+                                <div className="md:ml-auto lg:ml-auto mt-2 md:mt-9 lg:mt-5 lg:w-96 md:w-96 max-h-screen md:max-h-screen lg:max-h-[550px] overflow-x-hidden overflow-y-scroll ">
                                     <div className="flex shadow-lg">
                                         <div className="w-full bg-white px-10 py-10">
                                             <div className="flex justify-between border-b pb-8">
