@@ -2,28 +2,10 @@ import React, { useState } from 'react';
 import {Consumer} from './../../store/appContext'
 import './../../index.css';
 
-export default class Cart extends React.Component {
-    constructor(){
-        super();
-        this.state={
-            show: true
-        };
-        this.showHide = this.showHide.bind(this);    
-    }
+function Cart() {
+    const [show, setShow] = useState(true);
 
-    showHide(){
-        if (!this.state.show){
-            this.setState({
-                show: true
-            });
-        } else this.setState({
-            show: false
-        });
-    }
-
-    render() {
-
-        if (this.state.show) {
+        if (show) {
             return (
                 <Consumer>
                     {({state, actions}) => {
@@ -34,7 +16,7 @@ export default class Cart extends React.Component {
                                         <div className="w-full bg-white px-10 py-10">
                                             <div className="flex justify-between border-b pb-8">
                                                 <h1 class="font-semibold text-2xl">Your Cart</h1>
-                                                <button onClick={this.showHide}><h2 class="font-semibold text-2xl">X</h2></button>
+                                                <button onClick={() => setShow(false)}><h2 class="font-semibold text-2xl">X</h2></button>
                                             </div>
                                             {
                                                 state.cart.map((product, index) => {
@@ -96,7 +78,8 @@ export default class Cart extends React.Component {
         } else return null;
 
 
-        
-    };
+      
     
 }
+
+export default Cart;
