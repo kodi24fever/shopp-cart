@@ -3,11 +3,7 @@
 This project was made with [Create React App](https://github.com/facebook/create-react-app).
 
 # Download Project from Repository
-[Download Repository](https://github.com/kodi24fever/shopp-cart.git)
-
-or
-
-Install the with git clone.
+Download with git clone.
 ```sh
 git clone https://github.com/kodi24fever/shopp-cart.git
 ```
@@ -36,8 +32,8 @@ You may also see any lint errors in the console.
 
 ## Features
 
-- Built with Tailwinds.css plus my own css
-- Cart funcionalities in place with minor bugs
+- Built with Tailwinds.css
+- Cart funcionalities in place
 - Fully responsive for most of screens sizes
 
 ## Tech Used
@@ -46,8 +42,8 @@ Shopp-cart uses a number of open source projects to work properly:
 
 - [ReactJS] - HTML enhanced for web apps!
 - [Tailwindscss] - A utility-first CSS framework
-- [Context API] - Built in React kinda state managment for small web-apps
-- [React-Routing] - To travel between paths (not implemented)
+- [React-Routing] - To travel between paths
+- [Zustand] - For state managment
 
 ## Conclusion
 

@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import './../index.css';
-import Logo from './../assets/Big-Logo.png';
-import Face from './../assets/Face-Icon.png';
-import Twitter from './../assets/Twitter-Icon.png';
-import Instagram from './../assets/Instagram-Icon.png';
-import Youtube from './../assets/Youtube-Icon.png';
-import Pinterest from './../assets/Pinterest-Icon.png';
-import Video from './../assets/Footer-Video.png';
 
+//import socail media
+import SocialMediaIcons from './footer.social-media';
+
+import Logo from './../../assets/Big-Logo.png';
+import Video from './../../assets/Footer-Video.png';
 
 function Footer(){
     return(
@@ -19,20 +16,15 @@ function Footer(){
                             <img className="h-16 w-full md:pr-14 lg:pr-14" src={Logo}/>
                         </div>
 
-                        <div className="flex items-left justify-start show-vi hide-vi ">
+                        <div className="flex items-left justify-start show-vi hide-vi">
                             <img className="h-full w-full" src={Video}/>
                         </div>
 
-                        <div className="flex flex-row justify-between md:justify-start md:gap-5 lg:justify-start lg:gap-8 mt-10 bottom-icons">
-                            <div><img className="h-5" src={Face}/></div>
-                            <div><img className="h-5" src={Twitter}/></div>
-                            <div><img className="h-5" src={Instagram}/></div>
-                            <div><img className="h-5" src={Youtube}/></div>
-                            <div><img className="h-5" src={Pinterest}/></div>
-                        </div>
-
-                        
+                        <SocialMediaIcons />
+   
                     </div>
+
+
                     <div className="text-white hide-el">
                         <h1 className="text-xl">Massa</h1>
                         <div className="text-base text-[#A0A2A6] mt-5">
